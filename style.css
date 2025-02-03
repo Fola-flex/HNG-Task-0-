@@ -6,8 +6,13 @@
    box-sizing: border-box; 
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
+    height: 100%;
 }
 
 header {
@@ -15,6 +20,10 @@ header {
     color: white;
     text-align: center;
     padding: 1rem 0rem;
+}
+
+main {
+    min-height: 100%;
 }
 
 .card_container {
