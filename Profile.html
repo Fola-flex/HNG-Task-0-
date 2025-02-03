@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNG Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HNG TASK 0</h1>
+    </header>
+    <main>
+        <div class="card_container">
+            <div class="card">
+                <div class="p_image">
+                    <div class="img_container">
+                        <img src="fola3.jpg" alt="Profile Image" data-testid="profilePicture">
+                    </div>                    
+                </div>                
+                <div class="about">
+                    <div class="description">
+                        <h1 class="name" data-testid="fullName">Olaore Muiz Afolarin</h1>
+                        <p data-testid="jobTitle">Front-End Developer</p>
+                        <p class="email"><a href="mailto:folarinolaore93@gmail.com" data-testid="emailAddress">folarinolaore93@gmail.com</a></p>
+                    </div>
+                    <div class="bio">
+                        <p data-testid="shortBio">Enthusiastic and passion-driven individual with a strong desire to create beautiful, engaging, functional, efficient and user-friendly websites. Constantly learning and growing in the field of frontend development, with a keen eye for design and functionality. When I'm not coding I love to watch movies, anime and listen to music. I also love watching, playing football(soccer) a lot and I keep up with sports in general. I'm an avid fan of Liverpool Football Club(YNWA). Ah, I do love coffee, every developer does .
+                            &#128516;        
+                        </p>
+                        <div class="social" data-testid="socialLinks">
+                            <a href="https://mobile.twitter.com/Man_like_Fola" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/folarin_olaore" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/muiz-olaore-5776a222a" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Fola-flex" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p data-testid="currentLocation">Lagos, Nigeria.</p>
+                        <p><small class="time" data-testid="currenTimeUTC"></small></p>
+                    </div>                       
+                </div>                    
+            </div>
+        </div>        
+    </main>
+    <footer></footer>
+
+<script>
+    const date = document.querySelector(".time");
+    setInterval(() => {
+        const d = new Date();
+        const h = d.getHours();
+        const m = d.getMinutes() > 9 ? d.getMinutes() : '0'+d.getMinutes();
+        const s = d.getSeconds() > 9 ? d.getSeconds() : '0'+d.getSeconds();
+        date.innerHTML = h + ":" + m + ":" + s;
+    }, 1000)
+    console.log(date)
+</script>
+</body>
+</html>
